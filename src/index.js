@@ -7,13 +7,17 @@ import reportWebVitals from './reportWebVitals';
 // React Routing
 import { BrowserRouter } from 'react-router-dom'
 
+// Context 
+import { UserProvider } from './context/user.context';
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <App />
+      <UserProvider >
+        <App />
+      </UserProvider>
     </BrowserRouter>
-
   </React.StrictMode>
 );
 
